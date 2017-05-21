@@ -4,8 +4,17 @@ var childArray = ['child1', 'child2', 'child3', 'child4', 'child5', 'child6', 'c
 var totalChildren = 0;
 var locationsArray = [];
 
-var beachLocation = document.getElementById()
-function ChildLocation() {
+
+var addChildInfo = document.getElementById('addChildInfo');
+//var staffLocation = document.getElementById('addStaffLocation');
+
+
+function addChildLocation(name, location) {
+  this.name = name;
+  this.location = location;
+}
+
+
 
 
 
