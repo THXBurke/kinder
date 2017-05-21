@@ -1,20 +1,27 @@
 'use strict'
 ///global variables
-var childArray = ['child1', 'child2', 'child3', 'child4', 'child5', 'child6', 'child7', 'child8', 'child9', 'child10', 'child11', 'child12'];
+var childArray = [];
 var totalChildren = 0;
-var locationsArray = [];
+var locationsArray = ['Beach', "Treehouse", "Forest"];
 
 
 var addChildInfo = document.getElementById('addChildInfo');
 //var staffLocation = document.getElementById('addStaffLocation');
 
 
-function addChildLocation(name, location) {
-  this.name = name;
+function DailyData(childName, location, staff) {
+  this.childName = childName;
   this.location = location;
+  this.staff = staff;
 }
 
-
+this.render = function() {
+  var rowElement = document.createElement('tr');
+  var dataElement = document.createElement('td');
+  dataElement.textContent = this.childName;
+  dataElement.setAttribute('class', 'childNameTable');
+  rowElement.appendChild(dataElement);
+}
 
 
 
