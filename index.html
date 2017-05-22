@@ -1,95 +1,38 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Seattle Outdoor Kindergarten</title>
-    <link rel="stylesheet" href="style.css"/>
-  </head>
-  <body>
-    <header>
-      <div id="heading">
-        <h1>Welcome To Seattle Outdoor Kindergarten!</h1>
-        <h2>Please sign in your child for the day.</h2>
+<head>
+  <title>Seattle Outdoor Kindergarten</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+  <header>
+    <div id="heading">
+      <h1>Welcome To Seattle Outdoor Kindergarten!</h1>
+      <h2>Please sign in your child for the day.</h2>
+    </div>
+  </header>
+  <form id="addChildForm" method="post" class="addChildForm">
+    <fieldset>
+      <legend>Attendance and Location Entry</legend>
+      <label for="childName">Child's Name (last name followed by first ex: Last, First):</label>
+      <input name="childName" type="text"/><br>
+      <label for="location">Starting Location:</label><br>
+      <div class="radioB">
+      <input name="radioB" type="radio" id="beach" />
+      <label for="beach">Beach</label><br>
       </div>
-    </header>
-    <form id="addChildForm" method="post" class="addChildForm">
-      <fieldset>
-        <legend>Attendance and Location Entry</legend>
-        <label for="childName">Child's Name (last name followed by first ex: Last, First):</label>
-        <input name="childName" type="text"/><br>
-        <label for="location">Starting Location:</label><br>
-        <input name="beach" type="radio" id="beach" />
-        <label for="beach">Beach</label><br>
-        <input name="treehouse" type="radio" id="treehouse" />
-        <label for="treehouse">Treehouse</label><br>
-        <input name="forest" type="radio" id="treehouse" />
-        <label for"forest">Forest</label><br>
-        <button type="submit">Submit</button>
-      </fieldset>
-    </form>
-<!--
-<table>
-<tr>
-  <th>Child's name</th>
-  <th>Beach</th>
-  <th>Treehouse</th>
-  <th>Forest</th>
-</tr>
-<tr>
-  <td>Child1</td>
-  <td>
-    <div class="radio1">
-        <label><input type="radio" id='radio1beach' name="radio1">B</label>
-    </div>
-  </td>
-  <td>
-    <div class="radio1">
-      <label><input type="radio" id='radio1treehouse' name="radio1">T</label>
-    </div>
-  </td>
-  <td>
-    <div class="radio1">
-      <label><input type="radio" id='radio1forest' name="radio1">F</label>
-    </div>
-  </td>
-</tr>
-<tr>
-  <td>Child2</td>
-  <td>
-    <div class="radio2">
-        <label><input type="radio" id='radio2beach' name="radio2">B</label>
-    </div>
-  </td>
-  <td>
-    <div class="radio2">
-        <label><input type="radio" id='radio2treehouse' name="radio2">T</label>
-    </div>
-  </td>
-  <td>
-    <div class="radio2">
-        <label><input type="radio" id='radio2forest' name="radio2">F</label>
-    </div>
-  </td>
-</tr>
-<tr>
-  <td>Child3</td>
-  <td>
-    <div class="radio3">
-        <label><input type="radio" id='radio3beach' name="radio3">B</label>
-    </div>
-  </td>
-  <td>
-    <div class="radio3">
-        <label><input type="radio" id='radio3treehouse' name="radio3">T</label>
-    </div>
-  </td>
-  <td>
-    <div class="radio3">
-        <label><input type="radio" id='radio3forest' name="radio3">F</label>
-    </div>
-  </td>
-</tr>
-</table> -->
-      <table id="addChildInfoTable"></table>
-    <script src="app.js"></script>
-  </body>
+      <div class="radioT">
+      <input name="radioT" type="radio" id="treehouse" />
+      <label for="treehouse">Treehouse</label><br>
+      </div>
+      <div class="radioF">
+      <input name="radioF" type="radio" id="forest" />
+      <label for="forest">Forest</label><br>
+      </div>
+      <button type="submit">Submit</button>
+    </fieldset>
+  </form>
+  <table id="addChildInfoTable"></table>
+  <script src="app.js"></script>
+</body>
 </html>

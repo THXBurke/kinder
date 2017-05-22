@@ -17,12 +17,10 @@ table {
   border: 40px;
 }
 
-td {
+th, td {
+  font-family: helvetica;
   border: 2px solid black;
-}
-
-th {
-  border: 2px solid black;
+  padding: 4px;
 }
 
 form {
