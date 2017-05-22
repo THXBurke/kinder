@@ -14,7 +14,7 @@
   <form id="addChildForm" method="post" class="addChildForm">
     <fieldset>
       <legend>Attendance and Location Entry</legend>
-      <label for="childName">Child's Name (last name followed by first ex: Last, First):</label>
+      <label for="childName">Child's Name:</label>
       <input name="childName" type="text"/><br>
       <label for="location">Starting Location:</label><br>
       <div class="radioB">
@@ -29,11 +29,20 @@
       <input name="radioF" type="radio" id="forest" />
       <label for="forest">Forest</label><br>
       </div>
-      <button type="submit">Submit</button>
+      <button type="submit">Add Child</button>
     </fieldset>
   </br>
   </form>
   <table id="addChildInfoTable"></table>
+  <form id= "removeChild">
+     <fieldset>
+       <legend>Log Child's Departure For the Day</legend>
+
+       <label for="removeChild">Child's Name:</label>
+       <input name="removeChild" type="text" required/>
+       <button type="submit">Remove Child</button>
+     </fieldset>
+   </form>
   <script src="app.js"></script>
 </body>
 </html>

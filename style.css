@@ -1,22 +1,39 @@
+
+html, body{
+  background: url("img/nature-background-images2.jpg") no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
 body {
-    background-color: #63b183;
+  margin: auto;
+    width: 70%;
+    padding: 5px;
 }
 
 h1, h2 {
   text-align: center;
   font-family: helvetica;
+  color: white;
+  font-size: 50px;
 }
+
 #addChildInfoTable {
   border: 2px solid black;
-  border-collapse: collapse;
+  /*border-collapse: collapse;*/
   width: 96%;
+  background-color: white;
+  margin: auto;
 }
 
 fieldset {
   border: 2px solid black;
 }
+
 table {
-  border-radius: 10%;
+  /*border-radius: 10%;*/
   font-family: helvetica;
   border: 40px;
 }
@@ -30,4 +47,8 @@ th, td {
 form {
   width: 96%;
   padding-top: 20px;
+  color: white;
+  font-size: 30px;
+  font-family: helvetica;
+  margin: auto;
 }

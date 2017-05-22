@@ -65,18 +65,20 @@ function handleChildDataSubmit(event) {
   addChildInfoTable.textContent = '';
 }
 
-function handleDeleteChild() {
+function handleRemoveChild() {
   event.preventDefault();
-  var inputDeleteChild = event.target.deleteChildName.value.toLowerCase();
+  var inputRemoveChild = event.target.removeChild.value.toLowerCase();
+  inputRemoveChild = document.getElementById('removeChild');
 
   for (var i = 0; i < childArray.length; i++) {
-    if(inputDeleteChild === childArray[i].name.toLowerCase());
+    if(inputRemoveChild === childArray[i].name.toLowerCase());
     childArray.splice(i,1);
   }
 }
 
-event.target.deleteChildName.value = null;
+event.target.removeChild.value = null;
 addChildInfoTable.textContent = '';
+
 handleChildDataSubmit();
 handleDeleteChild();
 makeHeaderRow();
@@ -84,4 +86,4 @@ makeChildRow();
 
 
 addChildForm.addEventListener('submit', handleChildDataSubmit);
-deleteChildName.addEventListener('submit', handleDeleteChild);
+removeChild.addEventListener('submit', handleRemoveChild);
