@@ -1,3 +1,9 @@
 body {
-    background-image: ("windSOK.jpeg");
+    display: block;
+    margin: 8px;
+    background-color: #63b183;
+}
+
+#addChildInfo {
+  border: 1px solid black;
 }
