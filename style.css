@@ -11,6 +11,10 @@ h1, h2 {
   border-collapse: collapse;
   width: 96%;
 }
+
+fieldset {
+  border: 2px solid black;
+}
 table {
   border-radius: 10%;
   font-family: helvetica;
