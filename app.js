@@ -10,9 +10,9 @@ var addChildInfoTable = document.getElementById('addChildInfoTable');
 var headerArray = ['Name', 'Beach', 'Treehouse', 'Forest'];
 
 //child constructor with var child = new ChildDailyData coming through the form
-function ChildDailyData(name) {
-  this.name = name;
-}
+// function ChildDailyData(name) {
+//   this.name = name;
+// }
 
 function makeHeaderRow() {
   var tableRow = document.createElement('tr');
@@ -38,26 +38,30 @@ function makeChildRow() {
     tdElement.textContent = childArray[child].name;
     tableRow.appendChild(tdElement);
     addChildInfoTable.appendChild(tableRow);
+    childArray.push([i++]);
   }
 }
+
 makeChildRow();
+
 
 function handleChildDataSubmit(event) {
   //prevent reload when submitted
-  event.preventDefault();
+  // event.preventDefault();
 
-  var inputChildData = event.target.name.value;
+  var inputChildName = event.target.childName.value;
+
 
   var childAlreadyEntered = false;
   for (var i = 0; i < childArray.length; i++) {
-    if (inputChildData === childArray[i].name) {
-      childArray[i].name = inputChildData;
+    if (inputChildName === childArray[i].name) {
+      childArray[i].name = inputChildName;
       childAlreadyEntered = true;
     }
   }
   if (childAlreadyEntered === false) {
-    var addChild = new ChildDailyData(inputChildData);
-    console.log('new child data entered', inputChildData, childArray);
+    var addChild = new ChildDailyName(inputChildName);
+    console.log('new child data entered', inputChildName, childArray);
   }
 
   event.target.name.value = null;
@@ -76,7 +80,7 @@ function handleRemoveChild() {
   }
 }
 
-event.target.removeChild.value = null;
+// event.target.removeChild.value = null;
 addChildInfoTable.textContent = '';
 
 handleChildDataSubmit();
