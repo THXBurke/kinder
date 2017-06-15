@@ -11,38 +11,49 @@
       <h2>Please sign in your child for the day.</h2>
     </div>
   </header>
-  <form id="addChildForm" method="post" class="addChildForm">
+
+  <form id="addChildForm">
     <fieldset>
       <legend>Attendance and Location Entry</legend>
+
       <label for="childName">Child's Name:</label>
       <input name="childName" type="text" input id="childName"/><br>
+
       <label for="location">Starting Location:</label><br>
+
       <div class="radioB">
-      <input name="radioB" type="radio" id="beach" />
+      <input name="radio" type="radio" value="beach" />
       <label for="beach">Beach</label><br>
       </div>
+
       <div class="radioT">
-      <input name="radioT" type="radio" id="treehouse" />
+      <input name="radio" type="radio" value="treehouse" />
       <label for="treehouse">Treehouse</label><br>
       </div>
+
       <div class="radioF">
-      <input name="radioF" type="radio" id="forest" />
+      <input name="radio" type="radio" value="forest" />
       <label for="forest">Forest</label><br>
       </div>
-      <button onclick="addChildRow()">Add Child</button>
+
+      <button type="submit">Add Child</button>
     </fieldset>
   </br>
   </form>
+
   <table id="addChildInfoTable"></table>
+
   <form id= "removeChild">
      <fieldset>
        <legend>Log Child's Departure For the Day</legend>
 
        <label for="removeChild">Child's Name:</label>
-       <input name="removeChild" type="text" required/>
+       <input name="removeChild" type="text" />
+
        <button type="submit">Remove Child</button>
      </fieldset>
    </form>
+   
   <script src="app.js"></script>
 </body>
 </html>

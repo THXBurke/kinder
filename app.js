@@ -1,29 +1,23 @@
-'use strict'
+'use strict';
 ///global variables
-var childArray = [];
 var totalChildrenPerLocation = 0;
-var locationsArray = ['Beach', 'Treehouse', 'Forest'];
-// var staffArray = 0;
+var locations = ['Beach', 'Treehouse', 'Forest'];
+var headers = ['Name', 'Beach', 'Treehouse', 'Forest'];
 var addChildForm = document.getElementById('addChildForm');
 var addChildInfoTable = document.getElementById('addChildInfoTable');
-//var staffLocation = document.getElementById('addStaffLocation');
-var headerArray = ['Name', 'Beach', 'Treehouse', 'Forest'];
-
-//child constructor with var child = new ChildDailyData coming through the form
-// function ChildDailyData(name) {
-//   this.name = name;
-// }
 
 function makeHeaderRow() {
+  var addChildInfoTable = document.getElementById('addChildInfoTable');
   var tableRow = document.createElement('tr');
   var thElement = document.createElement('th');
-  for (var i = 0; i < headerArray.length; i++) {
+  for (var i = 0; i < headers.length; i++) {
+    console.log(i);
     thElement = document.createElement('th');
-    thElement.textContent = headerArray[i];
+    thElement.textContent = headers[i];
     tableRow.appendChild(thElement);
   }
-  thElement = document.createElement('th');
-  thElement.textContent = headerArray[i];
+
   addChildInfoTable.appendChild(tableRow);;
 }
+
 makeHeaderRow();
