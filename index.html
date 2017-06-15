@@ -17,7 +17,8 @@
       <legend>Attendance and Location Entry</legend>
 
       <label for="childName">Child's Name:</label>
-      <input name="childName" type="text" input id="childName"/><br>
+      <input name="childName" type="text" input id="childFirstName" placeholder="First"/>
+      <input name="childName" type="text" input id="childLastName" placeholder="Last"/><br>
 
       <label for="location">Starting Location:</label><br>
 
@@ -48,12 +49,13 @@
        <legend>Log Child's Departure For the Day</legend>
 
        <label for="removeChild">Child's Name:</label>
-       <input name="removeChild" type="text" />
+       <input name="removeChild" type="text" input id="removeFirstName" placeholder="First"/>
+       <input name="removeChild" type="text" input id="removeLastName" placeholder="Last"/><br>
 
        <button type="submit">Remove Child</button>
      </fieldset>
    </form>
-   
+
   <script src="app.js"></script>
 </body>
 </html>
