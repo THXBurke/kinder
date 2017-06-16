@@ -9,6 +9,7 @@ var addChildInfoTable = document.getElementById('addChildInfoTable');
 
 function childTable(){
   var table = document.createElement('table');
+  table.setAttribute('id', 'addChildInfoTable');
   document.body.appendChild(table);
 }
 
@@ -28,7 +29,7 @@ function makeHeaderRow() {
 makeHeaderRow();
 
 //child constructor
-function ChildData(name) {
+function ChildData(childName) {
   this.childName = childName;
   locations.push(this);
 }
@@ -47,14 +48,14 @@ ChildData.prototype.generateRow = function() {
 
 //function to add child to table
 function handleChildAdd(event) {
+  event.preventDefault();
 
   if (!event.target.childName.value || !event.target.childName.value) {
     return alert('Please fill in the last then first name of child.');
   }
 
-  event.preventDefault();
-
   var form = event.target;
+  console.log('form.childName', form.childName);
   var childName = form.childName.value;
 
   console.log('log of the event object', event);
