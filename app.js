@@ -1,18 +1,24 @@
 'use strict';
 ///global variables
 var totalChildrenPerLocation = 0;
+var allChildren = [];
 var locations = ['Beach', 'Treehouse', 'Forest'];
 var headers = ['Name', 'Beach', 'Treehouse', 'Forest'];
 var addChildForm = document.getElementById('addChildForm');
 var addChildInfoTable = document.getElementById('addChildInfoTable');
 
+//child constructor
+function ChildData(name) {
+  this.childName = childName;
+  locations.push(this);
+}
 //function to make header of table
 function makeHeaderRow() {
   var addChildInfoTable = document.getElementById('addChildInfoTable');
   var tableRow = document.createElement('tr');
   var thElement = document.createElement('th');
+
   for (var i = 0; i < headers.length; i++) {
-    // console.log(i);
     thElement = document.createElement('th');
     thElement.textContent = headers[i];
     tableRow.appendChild(thElement);
@@ -23,17 +29,29 @@ function makeHeaderRow() {
 
 makeHeaderRow();
 
-function ChildData(name) {
-  this.name = name;
-  locations.push(this);
-}
-
-new ChildData();
-
 //function to add child to table
-function addChildToTable(event) {
+function handleChildAdd(event) {
 
-  event.preventDefault();
-}
+  if (!event.target.childName.value || !event.target.childName.value) {
+    return alert('Please fill in first and last name of child.');
+  }
+  console.log('log of the event object', event);
+  console.log('log of the event.target', event.target);
+  console.log('log of the event.target.childName', event.target.childName);
+  console.log('log of the event.target.childName.value', event.target.childName.value);
 
-addChildForm.addEventListener('submit', addChildToTable);
+  var newChildName = event.target.childName.value;
+
+
+  new ChildData(childName);
+
+  event.target.childName.value = null;
+
+  document.getElementById('childName').addEventListener('submit', function(event){
+    event.preventDefault();
+  });
+};
+
+
+// handleChildAdd();
+addChildForm.addEventListener('submit', handleChildAdd);
