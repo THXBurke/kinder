@@ -31,10 +31,7 @@ makeHeaderRow();
 //child constructor
 function ChildData(childName) {
   this.childName = childName;
-  locations.push(this);
 }
-//function to make header of table
-
 
 //create a row with all Child Data not on DOM yet
 ChildData.prototype.generateRow = function() {
@@ -44,6 +41,7 @@ ChildData.prototype.generateRow = function() {
   row.appendChild(childName);
 
   return row;
+
 };
 
 //function to add child to table
@@ -67,6 +65,7 @@ function handleChildAdd(event) {
   document.getElementById('addChildInfoTable').appendChild(addChild.generateRow());
 
   document.getElementById('addChildForm').addEventListener('submit', handleChildAdd);
+  form.reset();
 };
 
 // handleChildAdd();
